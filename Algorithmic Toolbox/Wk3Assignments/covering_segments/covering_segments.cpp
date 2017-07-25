@@ -11,7 +11,8 @@ vector<int> optimal_points(vector<pair <int, int> > segments)
   points.push_back(segments[segments.size()-1].first);
   int compareStart = segments[segments.size()-1].first;
   // note the pair is from small to large
-  for (int i=segments.size()-1;i>=0;i--)
+  // note here i>0 is right instead of i>=0, because there is i-1 
+  for (int i=segments.size()-1;i>0;i--)
   {
         // compare each starting point to the ending point of the left segment
         // if ending point is left to the compareStart point
